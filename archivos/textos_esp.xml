@@ -1,0 +1,53 @@
+<Texto>
+    <nav_inicio>Inicio</nav_inicio>
+    <nav_carta>Carta</nav_carta>
+    <nav_reservas>Reservas</nav_reservas>
+    <nav_juegos>Juegos</nav_juegos>
+
+    <btn_entrar>Entrar</btn_entrar>
+    <btn_registrarse>Registrarse</btn_registrarse>
+
+    <historia_titulo>Historia</historia_titulo>
+    <historia_texto>En 2017 Bar temático fusión de Arcades, ambientación nostálgica y música remember ~Established in 2017~</historia_texto>
+    
+    <contacto_titulo>Contacto:</contacto_titulo>
+    <email>email-prueba@correo.com</email>
+    <telefono>915465621</telefono>
+    <direccion>Plaza de la luna, 2</direccion>
+    <horario_titulo>Horario:</horario_titulo>
+    <horario>Jueves, Viernes y Sábados de 18:00 a 2:00</horario>
+
+    <carta>
+        <bebida>
+            <imagen>img/carta/mojito.jpg</imagen>
+            <nombre>Mojito</nombre>
+            <descripcion>
+                El mojito es el rey extra oficial de Cuba, y de medio mundo.
+                Como la Caipirinha, es uno de los combinados más populares del mundo, sobretodo en los últimos años en los que ha experimentado un auge.
+                Aunque a decir verdad, ya tiene sus años, porque se inventó en la época de la ley seca americana, cuando irse a Cuba a beber alcohol era un recoveco legal más.
+                Dado que muchos solían tomar una especie de mojitos, pero hecho con bourbon en lugar de ron, los lugareños se sacaron de la manga una nueva receta.
+            </descripcion>
+            <precio>6€</precio>
+        </bebida>
+        <bebida>
+            <imagen>img/carta/blueHawaii.jpg</imagen>
+            <nombre>Blue Hawaii</nombre>
+            <descripcion>
+                El primer Blue Hawaii lo hizo Harry Yee, el jefe de los barman del hotel Hilton Hawaiian Village en Waikiki.
+                Yee tuvo que crear un Cocktail de color azul cuando un representante de una conocida destilería le exigió una bebida con esa tonalidad, ya que estaba promocionando el Curaçao.
+                Aunque la combinación de ingredientes ha evolucionado, el Blue Hawaii mantiene el ron como bebida base y el clásico paraguas como adorno.
+            </descripcion>
+            <precio>7€</precio>
+        </bebida>
+        <bebida>
+            <imagen>img/carta/caipirinha.jpg</imagen>
+            <nombre>Caipirinha</nombre>
+            <descripcion>
+                La Caipirinha es uno de los cockteles más famosos del mundo, de origen brasileño pero muy extendido en todas partes en los últimos años.
+                El ingrediente principal y básico es la cachaça, la bebida alcohólica destilada más popular en Brasil.
+                Se trata de un aguardiente que se obtiene como producto de la destilación de la caña de azúcar, y suele tener una concentración de alcohol de entre el 38% y el 51%
+            </descripcion>
+            <precio>6.50€</precio>
+        </bebida>
+    </carta>
+</Texto>

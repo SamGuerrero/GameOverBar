@@ -1,11 +1,13 @@
 /*Variables*/
 @colorNeon: #00B5D4;
 @colorNeon2: #f0ad4e;
-@colorFondo: darken(#343A40, 10%);
-@colorLetra: white;
+@colorNeon3: #9d69a3;
+@colorNeon4: #D56062;
+@colorFondo: rgba(53, 59, 65, 0.7);
+@colorLetra: #F5FBEF;
 
 .colorNeon{
-    color: #FFFFFF;
+    color: @colorLetra;
     text-shadow: 0 0 8px @colorNeon, 0 0 2px @colorNeon, 0 0 10px @colorNeon, 0 0 6px @colorNeon, 0 0 20px @colorNeon, 0 0 20px @colorNeon, 0 0 1px @colorNeon, 0 0 12px @colorNeon;
 }
 /*Esto por si al final no me gusta el Neon: https://static.wixstatic.com/media/25033d_5c4f89c916ca479b9a0528a395926b49~mv2.gif*/
@@ -20,7 +22,7 @@
     background-color: @colorFondo;
     border: 2px solid @colorNeon;
     font-family: 'Montserrat', sans-serif;
-    opacity: 0.7;
+    font-size: .9em;
     line-height: 1.5;
 }
 
@@ -37,12 +39,23 @@ body {
 header span {
     font-size: 4em;
   	padding: .25em 0 .325em;
-    text-align: center;
     .colorNeon();
 }
 
 a {
     color: @colorLetra;
+}
+
+@media (min-width: 576px){
+    .navbar-buttons {
+        display:flex;
+        margin-left: auto;
+    }
+}
+
+.navbar-buttons button:hover {
+    background-color:@colorNeon;
+    border-color: @colorLetra;
 }
 
 .navbar{
@@ -58,8 +71,13 @@ a {
     width: 7em;
     margin-right: 0.5em;
     font-size: 1em;
-    border-color: @colorLetra;
+    border-color: @colorNeon;
     color: @colorLetra;
+}
+
+#contenido {
+    .estiloRazonable();
+    text-align: left;
 }
 
 #footer {
@@ -67,10 +85,9 @@ a {
     text-align: left;
 }
 
-h5 {
+.titulo_footer {
     .colorNeon();
+    font-weight: bold;
+    text-decoration: underline;
 }
 
-#contenido {
-    .estiloRazonable();
-}

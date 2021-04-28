@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Over Bar - Carta</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+    <!--Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat&display=swap" rel="stylesheet">
+
+    <!--JS-->
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/carta.js"></script>
+
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <span>
+            Game Over Bar
+        </span>
+        <img src="/img/iconos/espana.svg" class="icono" id="espanol"/>
+        <img src="/img/iconos/reino-unido.svg" class="icono" id="ingles"/>
+    </header>
+
+    <!--NavBar-->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="index.html"><img src="/img/iconos/vida.svg" class="icono"/><span id="nav_inicio"></span></a>
+                <a class="nav-item nav-link active" href="#carta.html"><img src="/img/iconos/cerveza.svg" class="icono"/><span id="nav_carta"></span></a>
+                <a class="nav-item nav-link" href="reservas.html"><img src="/img/iconos/preguntas.svg" class="icono"/><span id="nav_reservas"></span></a>
+                <a class="nav-item nav-link" href="juegos.html"><img src="/img/iconos/fantasma.svg" class="icono"/><span id="nav_juegos"></span></a>
+                <!--TODO: Si está registrado como usuario, que aparezca Torneo-->
+            </div>
+            <div class="navbar-buttons">
+                <button class="btn btn-outline-success ml-auto" type="button" id="btn_entrar"></button>
+                <button class="btn btn-sm btn-outline-secondary ml-auto" type="button" id="btn_registrarse"></button>
+            </div>
+        </div>
+    </nav>
+
+    <!--Contenido-->
+    <div class="container" id="contenido">
+        <!--Se rellena dinámicamente-->
+    </div>
+
+    <!--Footer-->
+    <div class="container" id="footer">
+        <div class="row">
+            <div class="col-sm">
+                <h5 class="titulo_footer" id="contacto_titulo"></h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <span id="email"></span><br> <!--TODO: Si le da al email que abra el correo-->
+                <span id="telefono"></span><br> <!--TODO: Si le da al telefono que guarde el número o llame-->
+                <span id="direccion"></span> <!--TODO: Si hace click que abra el maps-->
+            </div>
+            <!--Separador vertical-->
+            <div style="border-left:.5px solid gray;height:5em;"></div>
+            <div class="col-sm">
+                <span id="horario_titulo"></span><br>
+                <span id="horario"></span>
+            </div>
+            <!--Añadir imagen del sitio-->
+        </div>
+        <div class="row">
+            <div>Iconos diseñados por <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div>
+        </div>
+    </div>
+</body>
+</html>

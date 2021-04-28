@@ -20,6 +20,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat&display=swap" rel="stylesheet">
 
     <!--JS-->
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/index.js"></script>
 
 </head>
 <body>
@@ -28,6 +30,8 @@
         <span>
             Game Over Bar
         </span>
+        <img src="/img/iconos/espana.svg" class="icono" id="espanol"/>
+        <img src="/img/iconos/reino-unido.svg" class="icono" id="ingles"/>
     </header>
 
     <!--NavBar-->
@@ -37,43 +41,28 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#"><img src="/img/iconos/vida.svg" class="icono"/>Inicio</a>
-                <a class="nav-item nav-link" href="#"><img src="/img/iconos/cerveza.svg" class="icono"/>Carta</a>
-                <a class="nav-item nav-link" href="#"><img src="/img/iconos/preguntas.svg" class="icono"/>Reservas</a>
-                <a class="nav-item nav-link" href="#"><img src="/img/iconos/fantasma.svg" class="icono"/>Juegos</a>
+                <a class="nav-item nav-link active" href="#index.html"><img src="/img/iconos/vida.svg" class="icono"/><span id="nav_inicio"></span></a>
+                <a class="nav-item nav-link" href="carta.html"><img src="/img/iconos/cerveza.svg" class="icono"/><span id="nav_carta"></span></a>
+                <a class="nav-item nav-link" href="reservas.html"><img src="/img/iconos/preguntas.svg" class="icono"/><span id="nav_reservas"></span></a>
+                <a class="nav-item nav-link" href="juegos.html"><img src="/img/iconos/fantasma.svg" class="icono"/><span id="nav_juegos"></span></a>
                 <!--TODO: Si está registrado como usuario, que aparezca Torneo-->
             </div>
-        </div>
-        <div class="navbar-nav">
-            <button class="btn btn-outline-success ml-auto" type="button">Entrar</button>
-            <button class="btn btn-sm btn-outline-secondary ml-auto" type="button">Registrarse</button>
+            <div class="navbar-buttons">
+                <button class="btn btn-outline-success ml-auto" type="button" id="btn_entrar"></button>
+                <button class="btn btn-sm btn-outline-secondary ml-auto" type="button" id="btn_registrarse"></button>
+            </div>
         </div>
     </nav>
 
     <!--Contenido-->
     <div class="container" id="contenido">
         <div class="row">
-            <div class="col-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras semper arcu sapien, sed cursus velit bibendum sed. Nam in elit vel nisl tincidunt pharetra sit amet ut ex. Sed lorem sapien, ultrices vel leo id, pulvinar tincidunt tellus. Vivamus maximus pellentesque lacinia. Vivamus dictum, sem sit amet volutpat aliquam, nisl mauris cursus dui, in laoreet risus justo nec lacus. Vivamus tristique libero sem, iaculis ullamcorper odio vehicula ut. Duis auctor dolor eu nisi pellentesque mollis. Cras odio velit, ullamcorper ac tristique eget, scelerisque ut lorem. Donec congue eu leo sit amet pharetra.
-
-                Quisque a tristique lorem. Nam varius, leo a fringilla iaculis, diam tortor maximus purus, a aliquam urna enim ac dui. Vestibulum rhoncus aliquam mi, vel mattis quam venenatis ac. Pellentesque nec diam scelerisque, laoreet orci in, egestas enim. Quisque feugiat vehicula dapibus. Integer sit amet massa risus. In mollis augue felis, sit amet placerat ante tristique non.
-                
-                Mauris sollicitudin ornare leo egestas pellentesque. Vestibulum eget molestie tellus. Proin quis arcu elit. Etiam tempor vestibulum velit, in dictum est placerat at. Praesent interdum euismod quam, quis placerat velit volutpat vel. Integer varius, magna et iaculis tristique, sapien diam posuere urna, sed porttitor diam ex gravida arcu. Nullam euismod id purus et facilisis. Aliquam placerat, nulla ut bibendum interdum, eros ante sodales lectus, condimentum ultricies odio est id dui. Vivamus ut hendrerit magna. Aliquam arcu lectus, gravida at mauris eu, maximus vulputate justo.
-                
-                Sed pellentesque, lacus a mollis elementum, risus massa luctus metus, eu laoreet diam velit vitae eros. Quisque arcu ligula, eleifend hendrerit sapien sit amet, vestibulum auctor eros. Donec condimentum tellus vitae tortor accumsan rhoncus. In venenatis hendrerit tortor ut aliquam. Nunc posuere, enim eu varius auctor, nunc est dictum felis, vitae consectetur libero ante eu velit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean ultricies urna in lorem accumsan, a malesuada est egestas. Nulla eleifend ligula in elementum sodales. Cras eget ex in velit elementum congue eu eu elit. Pellentesque sed dapibus risus. Sed sollicitudin dolor lectus, at mollis erat imperdiet id. Nunc ac auctor odio.
-                
-                Fusce molestie augue eu justo suscipit interdum. Curabitur porta pulvinar justo vitae pharetra. Fusce ut tortor in purus tincidunt posuere. Sed fermentum massa nisl, eget imperdiet nunc iaculis quis. Nulla quis pretium massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam non ante eu tellus mattis consequat. Fusce in tempor ante. Donec aliquet elit sed augue maximus, sed maximus est semper. Morbi nec feugiat nisi. Nulla posuere libero id ex commodo rhoncus. Etiam dignissim faucibus semper. Maecenas aliquet magna mollis facilisis vestibulum. Aliquam interdum ligula sit amet vehicula dictum. Sed nec lacus vitae purus malesuada tincidunt.
+            <div class="col-md">
+                <img src="img/presentacion/maquinas.jpg" alt="Máquinas arcade" class="img-thumbnail">
             </div>
-            <div class="col-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras semper arcu sapien, sed cursus velit bibendum sed. Nam in elit vel nisl tincidunt pharetra sit amet ut ex. Sed lorem sapien, ultrices vel leo id, pulvinar tincidunt tellus. Vivamus maximus pellentesque lacinia. Vivamus dictum, sem sit amet volutpat aliquam, nisl mauris cursus dui, in laoreet risus justo nec lacus. Vivamus tristique libero sem, iaculis ullamcorper odio vehicula ut. Duis auctor dolor eu nisi pellentesque mollis. Cras odio velit, ullamcorper ac tristique eget, scelerisque ut lorem. Donec congue eu leo sit amet pharetra.
-
-                Quisque a tristique lorem. Nam varius, leo a fringilla iaculis, diam tortor maximus purus, a aliquam urna enim ac dui. Vestibulum rhoncus aliquam mi, vel mattis quam venenatis ac. Pellentesque nec diam scelerisque, laoreet orci in, egestas enim. Quisque feugiat vehicula dapibus. Integer sit amet massa risus. In mollis augue felis, sit amet placerat ante tristique non.
-                
-                Mauris sollicitudin ornare leo egestas pellentesque. Vestibulum eget molestie tellus. Proin quis arcu elit. Etiam tempor vestibulum velit, in dictum est placerat at. Praesent interdum euismod quam, quis placerat velit volutpat vel. Integer varius, magna et iaculis tristique, sapien diam posuere urna, sed porttitor diam ex gravida arcu. Nullam euismod id purus et facilisis. Aliquam placerat, nulla ut bibendum interdum, eros ante sodales lectus, condimentum ultricies odio est id dui. Vivamus ut hendrerit magna. Aliquam arcu lectus, gravida at mauris eu, maximus vulputate justo.
-                
-                Sed pellentesque, lacus a mollis elementum, risus massa luctus metus, eu laoreet diam velit vitae eros. Quisque arcu ligula, eleifend hendrerit sapien sit amet, vestibulum auctor eros. Donec condimentum tellus vitae tortor accumsan rhoncus. In venenatis hendrerit tortor ut aliquam. Nunc posuere, enim eu varius auctor, nunc est dictum felis, vitae consectetur libero ante eu velit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean ultricies urna in lorem accumsan, a malesuada est egestas. Nulla eleifend ligula in elementum sodales. Cras eget ex in velit elementum congue eu eu elit. Pellentesque sed dapibus risus. Sed sollicitudin dolor lectus, at mollis erat imperdiet id. Nunc ac auctor odio.
-                
-                Fusce molestie augue eu justo suscipit interdum. Curabitur porta pulvinar justo vitae pharetra. Fusce ut tortor in purus tincidunt posuere. Sed fermentum massa nisl, eget imperdiet nunc iaculis quis. Nulla quis pretium massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam non ante eu tellus mattis consequat. Fusce in tempor ante. Donec aliquet elit sed augue maximus, sed maximus est semper. Morbi nec feugiat nisi. Nulla posuere libero id ex commodo rhoncus. Etiam dignissim faucibus semper. Maecenas aliquet magna mollis facilisis vestibulum. Aliquam interdum ligula sit amet vehicula dictum. Sed nec lacus vitae purus malesuada tincidunt.
+            <div class="col-md">
+                <h3 id="historia_titulo"></h3>
+                <p id="historia_texto"></p>
             </div>
             
         </div>
@@ -83,22 +72,25 @@
     <div class="container" id="footer">
         <div class="row">
             <div class="col-sm">
-                <h5><b><u>Contacto:</u></b></h5>
+                <h5 class="titulo_footer" id="contacto_titulo"></h5>
             </div>
         </div>
         <div class="row">
             <div class="col-sm">
-                <span>email-prueba@correo.com</span><br> <!--TODO: Si le da al email que abra el correo-->
-                <span>915465621</span><br> <!--TODO: Si le da al telefono que guarde el número o llame-->
-                <span>Plaza de la luna, 2</span> <!--TODO: Si hace click que abra el maps-->
+                <span id="email"></span><br> <!--TODO: Si le da al email que abra el correo-->
+                <span id="telefono"></span><br> <!--TODO: Si le da al telefono que guarde el número o llame-->
+                <span id="direccion"></span> <!--TODO: Si hace click que abra el maps-->
             </div>
             <!--Separador vertical-->
             <div style="border-left:.5px solid gray;height:5em;"></div>
             <div class="col-sm">
-                <span>Horario:</span><br>
-                <span>Jueves, Viernes y Sábados de 18:00 a 2:00</span>
+                <span id="horario_titulo"></span><br>
+                <span id="horario"></span>
             </div>
             <!--Añadir imagen del sitio-->
+        </div>
+        <div class="row">
+            <div>Iconos diseñados por <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div>
         </div>
     </div>
 </body>

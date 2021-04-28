@@ -1,0 +1,53 @@
+<Texto>
+    <nav_inicio>Home</nav_inicio>
+    <nav_carta>Menu</nav_carta>
+    <nav_reservas>Reservations</nav_reservas>
+    <nav_juegos>Games</nav_juegos>
+
+    <btn_entrar>Log in</btn_entrar>
+    <btn_registrarse>Sign up</btn_registrarse>
+
+    <historia_titulo>Story</historia_titulo>
+    <historia_texto>In 2017 we did many things, like for example think about this bar, and then qhen the bank gave us credit, we decide to make the best f bar in all Callao</historia_texto>
+    
+    <contacto_titulo>Contact:</contacto_titulo>
+    <email>email-prueba@correo.com</email>
+    <telefono>915465621</telefono>
+    <direccion>Plaza de la luna, 2</direccion>
+    <horario_titulo>Opening hours:</horario_titulo>
+    <horario>Thursday, Friday and Saturdays from 18:00 to 2:00</horario>
+
+    <carta>
+        <bebida>
+            <imagen>img/carta/mojito.jpg</imagen>
+            <nombre>Mojito</nombre>
+            <descripcion>
+                The mojito is Cuba's extraoficial king, as half of the world.
+                As caipirinha, is one of the most popular cocktail of the world, especially in recent years, during which it has experienced a boom.
+                Although, to tell the truth, it has been around for years, because it was invented during the time of the American dry law, when going to Cuba to drink alcohol was just another legal loophole.
+                Since many used to drink a kind of mojito, but made with bourbon instead of rum, the locals came up with a new recipe.
+            </descripcion>
+            <precio>6€</precio>
+        </bebida>
+        <bebida>
+            <imagen>img/carta/blueHawaii.jpg</imagen>
+            <nombre>Blue Hawaii</nombre>
+            <descripcion>
+                The first Blue Hawaii was made by Harry Yee, the head bartender at the Hilton Hawaiian Village hotel in Waikiki.
+                Yee had to create a blue-colored cocktail when a representative of a well-known distillery demanded a drink with that hue, as he was promoting Curaçao.
+                Although the combination of ingredients has evolved, the Blue Hawaii maintains rum as the base drink and the classic umbrella as a garnish.
+            </descripcion>
+            <precio>7€</precio>
+        </bebida>
+        <bebida>
+            <imagen>img/carta/caipirinha.jpg</imagen>
+            <nombre>Caipirinha</nombre>
+            <descripcion>
+                The Caipirinha is one of the most famous cocktails in the world, of Brazilian origin but very widespread everywhere in recent years.
+                The main and basic ingredient is cachaça, the most popular distilled alcoholic beverage in Brazil.
+                It is a spirit obtained from the distillation of sugar cane, and usually has an alcohol concentration of between 38% and 51%.
+            </descripcion>
+            <precio>6.50€</precio>
+        </bebida>
+    </carta>
+</Texto>
