@@ -35,6 +35,11 @@ header span {
 a {
   color: #F5FBEF;
 }
+.a_underButton {
+  color: #00B5D4;
+  font-style: italic;
+  text-decoration: underline;
+}
 @media (min-width: 576px) {
   .navbar-buttons {
     display: flex;
@@ -51,6 +56,10 @@ a {
 }
 .icono {
   width: 1.5em;
+}
+.goBack {
+  transform: rotate(90deg);
+  margin-right: 0.5em;
 }
 .btn {
   width: 7em;
@@ -93,10 +102,6 @@ a {
   font-weight: bold;
   text-decoration: underline;
 }
-
-.imgCarta {
-  height: 20em;
-  width: 15em;
-  object-fit: cover;
-  padding: 1em;
+.formulario {
+  text-align: center;
 }

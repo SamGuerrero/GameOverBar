@@ -1,4 +1,12 @@
-<!DOCTYPE ht<!--CSS-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Over Bar - Login</title>
+
+    <!--CSS-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
 
@@ -13,16 +21,7 @@
 
     <!--JS-->
     <script src="js/jquery-3.6.0.js"></script>
-    <script src="js/juegos.js"></script>ml>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Over Bar - Juegos</title>
-
-    
-
+    <script src="js/registro.js"></script>
 </head>
 <body>
     <!--Header-->
@@ -41,22 +40,52 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="index.html"><img src="/img/iconos/vida.svg" class="icono"/><span id="nav_inicio"></span></a>
-                <a class="nav-item nav-link" href="carta.html"><img src="/img/iconos/cerveza.svg" class="icono"/><span id="nav_carta"></span></a>
-                <a class="nav-item nav-link" href="reservas.html"><img src="/img/iconos/preguntas.svg" class="icono"/><span id="nav_reservas"></span></a>
-                <a class="nav-item nav-link active" href="#juegos.html"><img src="/img/iconos/fantasma.svg" class="icono"/><span id="nav_juegos"></span></a>
-                <!--TODO: Si está registrado como usuario, que aparezca Torneo-->
-            </div>
-            <div class="navbar-buttons">
-                <button class="btn btn-outline-success ml-auto" type="button" id="btn_entrar"></button>
-                <button class="btn btn-sm btn-outline-secondary ml-auto" type="button" id="btn_registrarse"></button>
+                <a class="nav-item nav-link" href="index.html"><img src="/img/iconos/arrow.svg" class="icono goBack"/><span id="nav_atras"></span></a>
             </div>
         </div>
     </nav>
 
     <!--Contenido-->
     <div class="container" id="contenido">
-        <!--Se rellena dinámicamente-->
+        <form class="formulario">
+            <div class="row">
+                <div class="col">
+                    <h3 id="titulo_formulario"></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <br><label id="label_nombre"></label>
+                    <br><input type="text">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <br><label id="label_email"></label>
+                    <br><input type="email">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <br><label id="label_contrasena"></label>
+                    <br><input type="password">
+                    <img src="/img/iconos/preguntas.svg" class="icono"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <br><label id="label_repiteContrasena"></label>
+                    <br><input type="password">
+                    <img src="/img/iconos/preguntas.svg" class="icono"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <br><button class="btn btn-sm btn-outline-secondary ml-auto" type="button" id="btn_registro"></button>
+                    <br><a href="#" id="tengo_cuenta" class="a_underButton"></a>
+                </div>
+            </div>
+        </form>
     </div>
 
     <!--Footer-->

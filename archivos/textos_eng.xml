@@ -3,6 +3,7 @@
     <nav_carta>Menu</nav_carta>
     <nav_reservas>Reservations</nav_reservas>
     <nav_juegos>Games</nav_juegos>
+    <nav_atras>Go Back</nav_atras>
 
     <btn_entrar>Log in</btn_entrar>
     <btn_registrarse>Sign up</btn_registrarse>
@@ -16,6 +17,13 @@
     <direccion>Plaza de la luna, 2</direccion>
     <horario_titulo>Opening hours:</horario_titulo>
     <horario>Thursday, Friday and Saturdays from 18:00 to 2:00</horario>
+
+    <titulo_formulario>Fill the form</titulo_formulario>
+    <label_nombre>Enter your user name</label_nombre>
+    <label_email>Enter your email</label_email>
+    <label_contrasena>Enter a password</label_contrasena>
+    <label_repiteContrasena>Repeat the password</label_repiteContrasena>
+    <tengo_cuenta>I already have an account</tengo_cuenta>
 
     <carta>
         <bebida>
@@ -50,4 +58,23 @@
             <precio>6.50€</precio>
         </bebida>
     </carta>
+
+    <juegos>
+        <juego>
+            <imagen>img/juegos/oregonTrail.jpeg</imagen>
+            <nombre>Oregon Trail</nombre>
+            <descripcion>
+                Seguro que has leído muchas veces lo de "fulanito de tal tiene disentería" en forma de meme para recordar el histórico The Oregon Trail de MECC (Minnesota Educational Computing Consortium), un juego que intentó reflejar la vida y dificultades del siglo XIX. El clásico de 1985 supuso una mejora radical sobre aquel prototipo en formato texto de 1971, pese a que en la actualidad nos parezca extremadamente primigenio el de la década de los 80. Sobra decir que la saga fue un éxito y sus ventas fueron millonarias.
+            </descripcion>
+            <disponible>No</disponible>
+        </juego>
+        <juego>
+            <imagen>img/juegos/oregonTrail.jpeg</imagen>
+            <nombre>Oregon Trail</nombre>
+            <descripcion>
+                Seguro que has leído muchas veces lo de "fulanito de tal tiene disentería" en forma de meme para recordar el histórico The Oregon Trail de MECC (Minnesota Educational Computing Consortium), un juego que intentó reflejar la vida y dificultades del siglo XIX. El clásico de 1985 supuso una mejora radical sobre aquel prototipo en formato texto de 1971, pese a que en la actualidad nos parezca extremadamente primigenio el de la década de los 80. Sobra decir que la saga fue un éxito y sus ventas fueron millonarias.
+            </descripcion>
+            <disponible>No</disponible>
+        </juego>
+    </juegos>
 </Texto>

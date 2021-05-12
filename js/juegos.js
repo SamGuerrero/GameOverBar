@@ -47,30 +47,24 @@ function colocarTexto(){
 
             //Contenido
             $("#contenido").empty();
-            $(res).find('carta').find('bebida').each(function(index){
+            $(res).find('juegos').find('juego').each(function(index){
                 let divRow = document.createElement( "div" );
-                let divColImg = document.createElement( "div" );
                 let divColText = document.createElement( "div" );
                 $(divRow).addClass('row');
-                $(divColImg).addClass('col-4-md');
                 $(divColText).addClass('col-md');
 
                 
-                let bebidaImg = document.createElement( "img" );
-                let bebidaNombre = document.createElement( "h3" );
-                let bebidaDesc = document.createElement( "p" );
-                let bebidaPrecio = document.createElement( "h6" );
+                let juegoImg = document.createElement( "img" );
+                let juegoNombre = document.createElement( "h3" );
+                let juegoDesc = document.createElement( "p" );
 
-                $(bebidaImg).attr('src', $(this).find('imagen').text());
-                $(bebidaImg).addClass('imgCarta');
-                $(divColImg).append(bebidaImg);
+                $(juegoImg).attr('src', $(this).find('imagen').text());
+                $(juegoImg).addClass('imgJuego');
+                $(juegoNombre).append(document.createTextNode($(this).find('nombre').text()));
+                $(juegoDesc).append(document.createTextNode($(this).find('descripcion').text()));
+                $(divColText).append(juegoNombre, juegoImg, juegoDesc);
 
-                $(bebidaNombre).append(document.createTextNode($(this).find('nombre').text()));
-                $(bebidaDesc).append(document.createTextNode($(this).find('descripcion').text()));
-                $(bebidaPrecio).append(document.createTextNode($(this).find('precio').text()));
-                $(divColText).append(bebidaNombre, bebidaDesc, bebidaPrecio);
-
-                $(divRow).append(divColImg, divColText);
+                $(divRow).append(divColText);
                 $("#contenido").append(divRow);
             });
 

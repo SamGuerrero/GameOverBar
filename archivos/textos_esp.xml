@@ -3,12 +3,17 @@
     <nav_carta>Carta</nav_carta>
     <nav_reservas>Reservas</nav_reservas>
     <nav_juegos>Juegos</nav_juegos>
+    <nav_atras>Atrás</nav_atras>
 
     <btn_entrar>Entrar</btn_entrar>
     <btn_registrarse>Registrarse</btn_registrarse>
 
     <historia_titulo>Historia</historia_titulo>
-    <historia_texto>En 2017 Bar temático fusión de Arcades, ambientación nostálgica y música remember ~Established in 2017~</historia_texto>
+    <historia_texto>
+        En 2017 estabamos unos amigos en un bar. Que si copa de más, que si la economía, el trabajo, la infancia...
+        Y entonces ocurrió, dimos con una de esas ideas que son geniales hasta que se te pasa la resaca al día siguiente: abriremos un Bar temático fusión de Arcades
+        con ambientación nostálgica y música ochentera. 2 años y 10 créditos al banco después, aquí estamos.
+    </historia_texto>
     
     <contacto_titulo>Contacto:</contacto_titulo>
     <email>email-prueba@correo.com</email>
@@ -16,6 +21,13 @@
     <direccion>Plaza de la luna, 2</direccion>
     <horario_titulo>Horario:</horario_titulo>
     <horario>Jueves, Viernes y Sábados de 18:00 a 2:00</horario>
+
+    <titulo_formulario>Rellene los datos del formulario</titulo_formulario>
+    <label_nombre>Introduzca su nombre de usuario</label_nombre>
+    <label_email>Introduzca su email</label_email>
+    <label_contrasena>Introduzca una contraseña</label_contrasena>
+    <label_repiteContrasena>Repita la contraseña</label_repiteContrasena>
+    <tengo_cuenta>Ya tengo una cuenta</tengo_cuenta>
 
     <carta>
         <bebida>
@@ -50,4 +62,23 @@
             <precio>6.50€</precio>
         </bebida>
     </carta>
+
+    <juegos>
+        <juego>
+            <imagen>img/juegos/oregonTrail.jpeg</imagen>
+            <nombre>Oregon Trail</nombre>
+            <descripcion>
+                Seguro que has leído muchas veces lo de "fulanito de tal tiene disentería" en forma de meme para recordar el histórico The Oregon Trail de MECC (Minnesota Educational Computing Consortium), un juego que intentó reflejar la vida y dificultades del siglo XIX. El clásico de 1985 supuso una mejora radical sobre aquel prototipo en formato texto de 1971, pese a que en la actualidad nos parezca extremadamente primigenio el de la década de los 80. Sobra decir que la saga fue un éxito y sus ventas fueron millonarias.
+            </descripcion>
+            <disponible>No</disponible>
+        </juego>
+        <juego>
+            <imagen>img/juegos/duckHunt.jpeg</imagen>
+            <nombre>Duck Hunt</nombre>
+            <descripcion>
+                Seguro que has leído muchas veces lo de "fulanito de tal tiene disentería" en forma de meme para recordar el histórico The Oregon Trail de MECC (Minnesota Educational Computing Consortium), un juego que intentó reflejar la vida y dificultades del siglo XIX. El clásico de 1985 supuso una mejora radical sobre aquel prototipo en formato texto de 1971, pese a que en la actualidad nos parezca extremadamente primigenio el de la década de los 80. Sobra decir que la saga fue un éxito y sus ventas fueron millonarias.
+            </descripcion>
+            <disponible>No</disponible>
+        </juego>
+    </juegos>
 </Texto>

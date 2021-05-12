@@ -14,12 +14,11 @@ $(function(){
         colocarTexto();
     });
 
-    $('#btn_registrarse').click(function(){
-        window.location="registro.html";
-    });
-
-    $('#btn_entrar').click(function(){
-        
+    //TODO: Mostrar toast cuando se equivoque o pase por encima
+    //TODO: Añadir regexp para controlar errores
+    //TODO: Enviar email para confirmar
+    $('.icono').hover(function(){
+        $('.toast').toast('show');
     });
     
 });
@@ -40,18 +39,16 @@ function colocarTexto(){
         url: '../archivos/' + ruta,
         success: function(res){
             //Navigation Bar
-            $('#nav_inicio').html($(res).find('nav_inicio'));
-            $('#nav_carta').html($(res).find('nav_carta'));
-            $('#nav_reservas').html($(res).find('nav_reservas'));
-            $('#nav_juegos').html($(res).find('nav_juegos'));
-
-            //Botones de entrada
-            $('#btn_entrar').html($(res).find('btn_entrar'));
-            $('#btn_registrarse').html($(res).find('btn_registrarse'));
+            $('#nav_atras').html($(res).find('nav_atras'));
 
             //Contenido
-            $('#historia_titulo').html($(res).find('historia_titulo'));
-            $('#historia_texto').html($(res).find('historia_texto'));
+            $('#titulo_formulario').html($(res).find('titulo_formulario'));
+            $('#label_nombre').html($(res).find('label_nombre'));
+            $('#label_email').html($(res).find('label_email'));
+            $('#label_contrasena').html($(res).find('label_contrasena'));
+            $('#label_repiteContrasena').html($(res).find('label_repiteContrasena'));
+            $('#btn_registro').html($(res).find('btn_registrarse'));
+            $('#tengo_cuenta').html($(res).find('tengo_cuenta'));
 
             //Footer
             $('#contacto_titulo').html($(res).find('contacto_titulo'));
