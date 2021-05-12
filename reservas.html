@@ -8,6 +8,7 @@
 
     <!--CSS-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href='js/fullcalendar-5.7.0/lib/main.css' rel='stylesheet' />
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
 
     <!--Bootstrap-->
@@ -20,6 +21,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat&display=swap" rel="stylesheet">
 
     <!--JS-->
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/reservas.js"></script>
+    <script src='js/fullcalendar-5.7.0/lib/main.js'></script>
 
 </head>
 <body>
@@ -53,27 +57,23 @@
     <!--Contenido-->
     <div class="container" id="contenido">
         <div class="row">
+            <div class="col">
+                <h3 id="titulo_formulario"></h3>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras semper arcu sapien, sed cursus velit bibendum sed. Nam in elit vel nisl tincidunt pharetra sit amet ut ex. Sed lorem sapien, ultrices vel leo id, pulvinar tincidunt tellus. Vivamus maximus pellentesque lacinia. Vivamus dictum, sem sit amet volutpat aliquam, nisl mauris cursus dui, in laoreet risus justo nec lacus. Vivamus tristique libero sem, iaculis ullamcorper odio vehicula ut. Duis auctor dolor eu nisi pellentesque mollis. Cras odio velit, ullamcorper ac tristique eget, scelerisque ut lorem. Donec congue eu leo sit amet pharetra.
-
-                Quisque a tristique lorem. Nam varius, leo a fringilla iaculis, diam tortor maximus purus, a aliquam urna enim ac dui. Vestibulum rhoncus aliquam mi, vel mattis quam venenatis ac. Pellentesque nec diam scelerisque, laoreet orci in, egestas enim. Quisque feugiat vehicula dapibus. Integer sit amet massa risus. In mollis augue felis, sit amet placerat ante tristique non.
-                
-                Mauris sollicitudin ornare leo egestas pellentesque. Vestibulum eget molestie tellus. Proin quis arcu elit. Etiam tempor vestibulum velit, in dictum est placerat at. Praesent interdum euismod quam, quis placerat velit volutpat vel. Integer varius, magna et iaculis tristique, sapien diam posuere urna, sed porttitor diam ex gravida arcu. Nullam euismod id purus et facilisis. Aliquam placerat, nulla ut bibendum interdum, eros ante sodales lectus, condimentum ultricies odio est id dui. Vivamus ut hendrerit magna. Aliquam arcu lectus, gravida at mauris eu, maximus vulputate justo.
-                
-                Sed pellentesque, lacus a mollis elementum, risus massa luctus metus, eu laoreet diam velit vitae eros. Quisque arcu ligula, eleifend hendrerit sapien sit amet, vestibulum auctor eros. Donec condimentum tellus vitae tortor accumsan rhoncus. In venenatis hendrerit tortor ut aliquam. Nunc posuere, enim eu varius auctor, nunc est dictum felis, vitae consectetur libero ante eu velit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean ultricies urna in lorem accumsan, a malesuada est egestas. Nulla eleifend ligula in elementum sodales. Cras eget ex in velit elementum congue eu eu elit. Pellentesque sed dapibus risus. Sed sollicitudin dolor lectus, at mollis erat imperdiet id. Nunc ac auctor odio.
-                
-                Fusce molestie augue eu justo suscipit interdum. Curabitur porta pulvinar justo vitae pharetra. Fusce ut tortor in purus tincidunt posuere. Sed fermentum massa nisl, eget imperdiet nunc iaculis quis. Nulla quis pretium massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam non ante eu tellus mattis consequat. Fusce in tempor ante. Donec aliquet elit sed augue maximus, sed maximus est semper. Morbi nec feugiat nisi. Nulla posuere libero id ex commodo rhoncus. Etiam dignissim faucibus semper. Maecenas aliquet magna mollis facilisis vestibulum. Aliquam interdum ligula sit amet vehicula dictum. Sed nec lacus vitae purus malesuada tincidunt.
+                <div id='calendar'></div>
             </div>
             <div class="col-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras semper arcu sapien, sed cursus velit bibendum sed. Nam in elit vel nisl tincidunt pharetra sit amet ut ex. Sed lorem sapien, ultrices vel leo id, pulvinar tincidunt tellus. Vivamus maximus pellentesque lacinia. Vivamus dictum, sem sit amet volutpat aliquam, nisl mauris cursus dui, in laoreet risus justo nec lacus. Vivamus tristique libero sem, iaculis ullamcorper odio vehicula ut. Duis auctor dolor eu nisi pellentesque mollis. Cras odio velit, ullamcorper ac tristique eget, scelerisque ut lorem. Donec congue eu leo sit amet pharetra.
-
-                Quisque a tristique lorem. Nam varius, leo a fringilla iaculis, diam tortor maximus purus, a aliquam urna enim ac dui. Vestibulum rhoncus aliquam mi, vel mattis quam venenatis ac. Pellentesque nec diam scelerisque, laoreet orci in, egestas enim. Quisque feugiat vehicula dapibus. Integer sit amet massa risus. In mollis augue felis, sit amet placerat ante tristique non.
-                
-                Mauris sollicitudin ornare leo egestas pellentesque. Vestibulum eget molestie tellus. Proin quis arcu elit. Etiam tempor vestibulum velit, in dictum est placerat at. Praesent interdum euismod quam, quis placerat velit volutpat vel. Integer varius, magna et iaculis tristique, sapien diam posuere urna, sed porttitor diam ex gravida arcu. Nullam euismod id purus et facilisis. Aliquam placerat, nulla ut bibendum interdum, eros ante sodales lectus, condimentum ultricies odio est id dui. Vivamus ut hendrerit magna. Aliquam arcu lectus, gravida at mauris eu, maximus vulputate justo.
-                
-                Sed pellentesque, lacus a mollis elementum, risus massa luctus metus, eu laoreet diam velit vitae eros. Quisque arcu ligula, eleifend hendrerit sapien sit amet, vestibulum auctor eros. Donec condimentum tellus vitae tortor accumsan rhoncus. In venenatis hendrerit tortor ut aliquam. Nunc posuere, enim eu varius auctor, nunc est dictum felis, vitae consectetur libero ante eu velit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean ultricies urna in lorem accumsan, a malesuada est egestas. Nulla eleifend ligula in elementum sodales. Cras eget ex in velit elementum congue eu eu elit. Pellentesque sed dapibus risus. Sed sollicitudin dolor lectus, at mollis erat imperdiet id. Nunc ac auctor odio.
-                
-                Fusce molestie augue eu justo suscipit interdum. Curabitur porta pulvinar justo vitae pharetra. Fusce ut tortor in purus tincidunt posuere. Sed fermentum massa nisl, eget imperdiet nunc iaculis quis. Nulla quis pretium massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam non ante eu tellus mattis consequat. Fusce in tempor ante. Donec aliquet elit sed augue maximus, sed maximus est semper. Morbi nec feugiat nisi. Nulla posuere libero id ex commodo rhoncus. Etiam dignissim faucibus semper. Maecenas aliquet magna mollis facilisis vestibulum. Aliquam interdum ligula sit amet vehicula dictum. Sed nec lacus vitae purus malesuada tincidunt.
+                <form class="formulario"> 
+                    <label id="label_nombre"></label>
+                    <br><input type="text">
+                    <br><br><label id="label_numPersonas"></label>
+                    <br><input type="number">
+                    <br><br><button class="btn btn-sm btn-outline-secondary ml-auto" type="button" id="btn_reservar"></button>
+                    <br><a href="#" id="tengo_cuenta" class="a_underButton"></a>
+                </form>
             </div>
             
         </div>

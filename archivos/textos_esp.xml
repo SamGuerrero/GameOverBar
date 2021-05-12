@@ -27,7 +27,11 @@
     <label_email>Introduzca su email</label_email>
     <label_contrasena>Introduzca una contraseña</label_contrasena>
     <label_repiteContrasena>Repita la contraseña</label_repiteContrasena>
-    <tengo_cuenta>Ya tengo una cuenta</tengo_cuenta>
+    <tengo_cuenta>Tengo una cuenta creada</tengo_cuenta>
+
+    <label_nombreReserva>Introduzca su nombre</label_nombreReserva>
+    <label_numPersonas>¿Cuántas personas irán?</label_numPersonas>
+    <btn_reservar>Reservar</btn_reservar>
 
     <carta>
         <bebida>

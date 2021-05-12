@@ -23,7 +23,11 @@
     <label_email>Enter your email</label_email>
     <label_contrasena>Enter a password</label_contrasena>
     <label_repiteContrasena>Repeat the password</label_repiteContrasena>
-    <tengo_cuenta>I already have an account</tengo_cuenta>
+    <tengo_cuenta>I have an account</tengo_cuenta>
+
+    <label_nombreReserva>Enter your name</label_nombreReserva>
+    <label_numPersonas>How many people will go?</label_numPersonas>
+    <btn_reservar>Reserve</btn_reservar>
 
     <carta>
         <bebida>
