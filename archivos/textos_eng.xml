@@ -29,6 +29,10 @@
     <label_numPersonas>How many people will go?</label_numPersonas>
     <btn_reservar>Reserve</btn_reservar>
 
+    <errorEmail>You need a valid email</errorEmail>
+    <errorContrasena>The password must have from 8 to 16 characters, at least 1 uppercase, 1 lowercase y 1 number</errorContrasena>
+    <errorRepContrasena>Passwords must be the same</errorRepContrasena>
+
     <carta>
         <bebida>
             <imagen>img/carta/mojito.jpg</imagen>

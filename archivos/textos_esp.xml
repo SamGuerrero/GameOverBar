@@ -33,6 +33,10 @@
     <label_numPersonas>¿Cuántas personas irán?</label_numPersonas>
     <btn_reservar>Reservar</btn_reservar>
 
+    <errorEmail>Se necesita un email válido</errorEmail>
+    <errorContrasena>La contraseña debe contener de 8 a 16 caracteres, al menos 1 mayúscula, 1 minúscula y 1 dígito</errorContrasena>
+    <errorRepContrasena>Las contraseñas deben coincidir</errorRepContrasena>
+
     <carta>
         <bebida>
             <imagen>img/carta/mojito.jpg</imagen>

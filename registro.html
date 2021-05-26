@@ -55,28 +55,31 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <br><label id="label_nombre"></label>
-                    <br><input type="text">
+                    <label id="label_nombre"></label>
+                    <br><input type="text" id="nombre">
                 </div>
             </div>
             <div class="row">
                 <div class="col">
                     <br><label id="label_email"></label>
-                    <br><input type="email">
+                    <br><input type="email" id="email">
+                    <div class="reg_error" id="errorEmail"></div>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
                     <br><label id="label_contrasena"></label>
-                    <br><input type="password">
-                    <img src="/img/iconos/preguntas.svg" class="icono"/>
+                    <img src="/img/iconos/preguntas.svg" class="icono" id="icono_contrasena"/>
+                    <br><input type="password" id="contrasena">
+                    <div class="reg_error" id="errorContrasena"></div>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
                     <br><label id="label_repiteContrasena"></label>
-                    <br><input type="password">
-                    <img src="/img/iconos/preguntas.svg" class="icono"/>
+                    <img src="/img/iconos/preguntas.svg" class="icono" id="icono_repContrasena"/>
+                    <br><input type="password" id="repContrasena">
+                    <div class="reg_error" id="errorRepContrasena"></div>
                 </div>
             </div>
             <div class="row">
@@ -108,9 +111,6 @@
                 <span id="horario"></span>
             </div>
             <!--Añadir imagen del sitio-->
-        </div>
-        <div class="row">
-            <div>Iconos diseñados por <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div>
         </div>
     </div>
 </body>

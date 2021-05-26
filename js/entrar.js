@@ -15,16 +15,6 @@ $(function(){
         colocarTexto();
     });
 
-    $('#icono_contrasena').click(function(){
-        $('#errorContrasena').show();
-        setTimeout(function(){$('#errorContrasena').hide()}, 5000);
-    });
-
-    $('#icono_repContrasena').click(function(){
-        $('#errorRepContrasena').show();
-        setTimeout(function(){$('#errorRepContrasena').hide()}, 5000);
-    });
-
     $('#btn_registro').click(function(){
 
         if (!emailValido()){
@@ -39,22 +29,8 @@ $(function(){
             setTimeout(function(){$('#errorContrasena').hide()}, 5000);
         }
 
-        if (!constrasenaIgual()){
-            valido = false;
-            $('#errorRepContrasena').show();
-            setTimeout(function(){$('#errorRepContrasena').hide()}, 5000);
-        }
-
         if (valido){
-            let usuario = {
-                "Nombre": $('#nombre').val(),
-                "Email": $('#email').val(),
-                "Contrasena": $('#contrasena').val()
-            }
-
-            console.log(usuario.Nombre);
-            //TODO: Enviar email y cuando confirme entonces:
-            //TODO: Enviar usuario a MongoDB
+            //TODO: Comprobar usuario
         }else {
             valido = true;
         }
