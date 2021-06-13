@@ -15,7 +15,7 @@ $(function(){
         colocarTexto();
     });
 
-    $('#btn_registro').click(function(){
+    $('#btn_entrada').click(function(){
 
         if (!emailValido()){
             valido = false;
@@ -62,7 +62,7 @@ function colocarTexto(){
             $('#label_email').html($(res).find('label_email'));
             $('#label_contrasena').html($(res).find('label_contrasena'));
             $('#label_repiteContrasena').html($(res).find('label_repiteContrasena'));
-            $('#btn_registro').html($(res).find('btn_registrarse'));
+            $('#btn_entrada').html($(res).find('btn_entrar'));
             $('#tengo_cuenta').html($(res).find('tengo_cuenta'));
 
             //Errores

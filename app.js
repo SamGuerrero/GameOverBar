@@ -23,9 +23,9 @@ mongoose.connect(mongo_uri, function(err) {
 });
 
 app.post('/register', (req, res) =>{
-    const {username, email, password} = req.body;
+    let data = req.body;
 
-    const user = new User({username, email, password});
+    const user = new User({username: data.nombre, email: data.email, password: data.contrasena});
 
     user.save(err => {
         if (err){
@@ -38,9 +38,9 @@ app.post('/register', (req, res) =>{
 });
 
 app.post('/authenticate', (req, res) =>{
-    const {email, contrasena} = req.body;
-
-    User.findOne({username}, (err, user) => {
+    let data = req.body;
+    
+    User.findOne({email: data.email}, (err, user) => {
         if (err){
             res.status(500).send("Error al autenticar el usuario");
         
@@ -48,17 +48,9 @@ app.post('/authenticate', (req, res) =>{
             res.status(500).send("El usuario no existe");
         
         }else{
-            User.isCorrectPassword(contrasena, (err, res) => {
-                if (err) {
-                    res.status(500).send("Error al autenticar la contraseñ");
-                
-                }else if(res){
-                    res.status(200).send("Usuario autenticado correctamente");
-                
-                }else{
-                    res.status(500).send("Usuario y/o contraseña incorrectos");
-                }
-            });
+            if (user.isCorrectPassword(data.contrasena)){
+                console.log("Todo ok");
+            }else {console.log("Not OK")}
         }
     });
 });
