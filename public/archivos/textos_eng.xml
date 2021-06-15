@@ -4,9 +4,11 @@
     <nav_reservas>Reservations</nav_reservas>
     <nav_juegos>Games</nav_juegos>
     <nav_atras>Go Back</nav_atras>
+    <nav_perfil>Profile</nav_perfil>
 
     <btn_entrar>Log in</btn_entrar>
     <btn_registrarse>Sign up</btn_registrarse>
+    <btn_salir>Log out</btn_salir>
 
     <historia_titulo>Story</historia_titulo>
     <historia_texto>In 2017 we did many things, like for example think about this bar, and then qhen the bank gave us credit, we decide to make the best f bar in all Callao</historia_texto>
@@ -25,13 +27,16 @@
     <label_repiteContrasena>Repeat the password</label_repiteContrasena>
     <tengo_cuenta>I have an account</tengo_cuenta>
 
-    <label_nombreReserva>Enter your name</label_nombreReserva>
     <label_numPersonas>How many people will go?</label_numPersonas>
     <btn_reservar>Reserve</btn_reservar>
-
+    <reservaEnviada>An email has been with your reservation</reservaEnviada>
+    
     <errorEmail>You need a valid email</errorEmail>
     <errorContrasena>The password must have from 8 to 16 characters, at least 1 uppercase, 1 lowercase y 1 number</errorContrasena>
     <errorRepContrasena>Passwords must be the same</errorRepContrasena>
+    <errorServidor>A problem with the server has occurred. Try again later.</errorServidor>
+    <errorAutenticacion>Email or password are not correct</errorAutenticacion>
+    <errorPersonas>El número de personas introducidas en inválida</errorPersonas>
 
     <carta>
         <bebida>

@@ -22,6 +22,7 @@
 
     <!--JS-->
     <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/manageCookies.js"></script>
     <script src="js/reservas.js"></script>
     <script src='js/fullcalendar-5.7.0/lib/main.js'></script>
 
@@ -32,6 +33,8 @@
         <span>
             Game Over Bar
         </span>
+        <img src="/img/iconos/espana.svg" class="icono" id="espanol"/>
+        <img src="/img/iconos/reino-unido.svg" class="icono" id="ingles"/>
     </header>
 
     <!--NavBar-->
@@ -41,15 +44,16 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="index.html"><img src="/img/iconos/vida.svg" class="icono"/>Inicio</a>
-                <a class="nav-item nav-link" href="carta.html"><img src="/img/iconos/cerveza.svg" class="icono"/>Carta</a>
-                <a class="nav-item nav-link active" href="reservas.html"><img src="/img/iconos/preguntas.svg" class="icono"/>Reservas</a>
-                <a class="nav-item nav-link" href="juegos.html"><img src="/img/iconos/fantasma.svg" class="icono"/>Juegos</a>
-                <!--TODO: Si está registrado como usuario, que aparezca Torneo-->
+                <a class="nav-item nav-link" href="index.html"><img src="/img/iconos/vida.svg" class="icono"/><span id="nav_inicio"></span></a>
+                <a class="nav-item nav-link" href="carta.html"><img src="/img/iconos/cerveza.svg" class="icono"/><span id="nav_carta"></span></a>
+                <a class="nav-item nav-link active" href="#reservas.html"><img src="/img/iconos/preguntas.svg" class="icono"/><span id="nav_reservas"></span></a>
+                <a class="nav-item nav-link" href="juegos.html"><img src="/img/iconos/fantasma.svg" class="icono"/><span id="nav_juegos"></span></a>
+                <a class="nav-item nav-link" href="perfil.html" id="a_perfil"><img src="/img/iconos/info.svg" class="icono"/><span id="nav_perfil"></span></a>
             </div>
             <div class="navbar-buttons">
-                <button class="btn btn-outline-success ml-auto" type="button">Entrar</button>
-                <button class="btn btn-sm btn-outline-secondary ml-auto" type="button">Registrarse</button>
+                <button class="btn btn-outline-success ml-auto" type="button" id="btn_entrar"></button>
+                <button class="btn btn-sm btn-outline-secondary ml-auto" type="button" id="btn_registrarse"></button>
+                <button class="btn btn-sm btn-outline-secondary ml-auto" type="button" id="btn_salir"></button>
             </div>
         </div>
     </nav>
@@ -62,20 +66,25 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm">
+            <div class="col-md">
+                <div class="reg_error" id="errorCalendario"></div>
                 <div id='calendar'></div>
             </div>
-            <div class="col-sm">
-                <form class="formulario"> 
-                    <label id="label_nombre"></label>
-                    <br><input type="text">
+            <div class="col-md">
+                <br>
+                <form class="formulario" action="/sendEmail" method="POST">
+                    <label id="label_email"></label>
+                    <br><input type="text" id="email" name="email">
+                    <div class="reg_error" id="errorEmail"></div>
                     <br><br><label id="label_numPersonas"></label>
-                    <br><input type="number">
+                    <br><input type="number" min="1" max="25" id="personas" name="personas">
+                    <div class="reg_error" id="errorPersonas"></div>
                     <br><br><button class="btn btn-sm btn-outline-secondary ml-auto" type="button" id="btn_reservar"></button>
-                    <br><a href="#" id="tengo_cuenta" class="a_underButton"></a>
+                    <br><a href="entrar.html" id="tengo_cuenta" class="a_underButton"></a>
                 </form>
             </div>
-            
+
+            <div class="col" id="reservaEnviada"></div>
         </div>
     </div>
 

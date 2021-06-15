@@ -21,6 +21,7 @@
 
     <!--JS-->
     <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/manageCookies.js"></script>
     <script src="js/entrar.js"></script>
 </head>
 <body>
@@ -55,6 +56,11 @@
             </div>
             <div class="row">
                 <div class="col">
+                    <h5 id="errorAutenticacion"></h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
                     <br><label id="label_email"></label>
                     <br><input type="email" id="email" name="email">
                     <div class="reg_error" id="errorEmail"></div>
@@ -70,7 +76,6 @@
             <div class="row">
                 <div class="col">
                     <br><button class="btn btn-sm btn-outline-secondary ml-auto" type="button" id="btn_entrada"></button>
-                    <br><a href="#" id="tengo_cuenta" class="a_underButton"></a>
                 </div>
             </div>
         </form>

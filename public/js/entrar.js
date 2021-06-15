@@ -1,21 +1,20 @@
-//Variables globales
-let idioma = 'espanol';
-
 $(function(){
     colocarTexto();
     let valido = true;
 
     $('#espanol').click(function(){
-        idioma = 'espanol';
+        manageCookie('idioma', 'espanol');
         colocarTexto();
     });
 
     $('#ingles').click(function(){
-        idioma = 'ingles';
+        manageCookie('idioma', 'ingles');
         colocarTexto();
     });
 
     $('#btn_entrada').click(function(){
+        manageCookie('errorAutenticacion', "", -1); //Borrar cookie
+        $('#errorAutenticacion').html("");
 
         if (!emailValido()){
             valido = false;
@@ -39,6 +38,7 @@ $(function(){
 });
 
 function colocarTexto(){
+    let idioma = readCookie('idioma');
     let ruta;
     switch(idioma){
         case 'espanol': ruta ='textos_esp.xml';
@@ -69,6 +69,15 @@ function colocarTexto(){
             $('#errorEmail').html($(res).find('errorEmail'));
             $('#errorContrasena').html($(res).find('errorContrasena'));
             $('#errorRepContrasena').html($(res).find('errorRepContrasena'));
+            $('#errorAutenticacion').html($(res).find('errorAutenticacion'));
+            $('#errorAutenticacion').css('color', 'red');
+            if (readCookie('errorAutenticacion') != null){
+                console.log("Error")
+                $('#errorAutenticacion').show();
+            }else{
+                console.log("Sin errores");
+                $('#errorAutenticacion').hide();
+            }
 
             //Footer
             $('#contacto_titulo').html($(res).find('contacto_titulo'));

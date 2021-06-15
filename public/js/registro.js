@@ -1,17 +1,14 @@
-//Variables globales
-let idioma = 'espanol';
-
 $(function(){
     colocarTexto();
     let valido = true;
 
     $('#espanol').click(function(){
-        idioma = 'espanol';
+        manageCookie('idioma', 'espanol');
         colocarTexto();
     });
 
     $('#ingles').click(function(){
-        idioma = 'ingles';
+        manageCookie('idioma', 'ingles');
         colocarTexto();
     });
 
@@ -26,7 +23,6 @@ $(function(){
     });
 
     $('#btn_registro').click(function(){
-
         if (!emailValido()){
             valido = false;
             $('#errorEmail').show();
@@ -46,14 +42,6 @@ $(function(){
         }
 
         if (valido){
-            let usuario = {
-                "Nombre": $('#nombre').val(),
-                "Email": $('#email').val(),
-                "Contrasena": $('#contrasena').val()
-            }
-
-            console.log(usuario.Nombre);
-            //TODO: Enviar email y cuando confirme entonces:
             $('.formulario').submit();
         }else {
             valido = true;
@@ -63,6 +51,7 @@ $(function(){
 });
 
 function colocarTexto(){
+    let idioma = readCookie('idioma');
     let ruta;
     switch(idioma){
         case 'espanol': ruta ='textos_esp.xml';

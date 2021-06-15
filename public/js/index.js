@@ -1,16 +1,14 @@
-//Variables globales
-let idioma = 'espanol';
-
 $(function(){
     colocarTexto();
+    comprobarUsuario();
 
     $('#espanol').click(function(){
-        idioma = 'espanol';
+        manageCookie('idioma', 'espanol');
         colocarTexto();
     });
 
     $('#ingles').click(function(){
-        idioma = 'ingles';
+        manageCookie('idioma', 'ingles');
         colocarTexto();
     });
 
@@ -19,12 +17,21 @@ $(function(){
     });
 
     $('#btn_entrar').click(function(){
-        
+        window.location="entrar.html";
+    });
+
+    $('#btn_salir').click(function(){
+        manageCookie('usuario', "", -1);
+        comprobarUsuario()
+        $('#btn_entrar').show();
+        $('#btn_registrarse').show();
+        $('#btn_salir').hide();
     });
     
 });
 
 function colocarTexto(){
+    let idioma = readCookie('idioma');
     let ruta;
     switch(idioma){
         case 'espanol': ruta ='textos_esp.xml';
@@ -44,10 +51,19 @@ function colocarTexto(){
             $('#nav_carta').html($(res).find('nav_carta'));
             $('#nav_reservas').html($(res).find('nav_reservas'));
             $('#nav_juegos').html($(res).find('nav_juegos'));
+            $('#nav_perfil').html($(res).find('nav_perfil'));
 
             //Botones de entrada
             $('#btn_entrar').html($(res).find('btn_entrar'));
             $('#btn_registrarse').html($(res).find('btn_registrarse'));
+            $('#btn_salir').html($(res).find('btn_salir'));
+            if (readCookie('usuario') == null){
+                $('#btn_salir').hide();
+            
+            }else{
+                $('#btn_entrar').hide();
+                $('#btn_registrarse').hide();
+            }
 
             //Contenido
             $('#historia_titulo').html($(res).find('historia_titulo'));
@@ -63,4 +79,13 @@ function colocarTexto(){
 
         }
     });
+}
+
+function comprobarUsuario(){
+    if (readCookie('usuario') == null){
+        $('#a_perfil').hide();
+    
+    }else{
+        $('#a_perfil').show();
+    }
 }

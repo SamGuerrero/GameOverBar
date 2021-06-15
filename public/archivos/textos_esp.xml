@@ -4,9 +4,11 @@
     <nav_reservas>Reservas</nav_reservas>
     <nav_juegos>Juegos</nav_juegos>
     <nav_atras>Atrás</nav_atras>
+    <nav_perfil>Perfil</nav_perfil>
 
     <btn_entrar>Entrar</btn_entrar>
     <btn_registrarse>Registrarse</btn_registrarse>
+    <btn_salir>Cerrar sesión</btn_salir>
 
     <historia_titulo>Historia</historia_titulo>
     <historia_texto>
@@ -29,13 +31,16 @@
     <label_repiteContrasena>Repita la contraseña</label_repiteContrasena>
     <tengo_cuenta>Tengo una cuenta creada</tengo_cuenta>
 
-    <label_nombreReserva>Introduzca su nombre</label_nombreReserva>
     <label_numPersonas>¿Cuántas personas irán?</label_numPersonas>
     <btn_reservar>Reservar</btn_reservar>
-
+    <reservaEnviada>Se ha enviado un email con tu reserva</reservaEnviada>
+    
     <errorEmail>Se necesita un email válido</errorEmail>
     <errorContrasena>La contraseña debe contener de 8 a 16 caracteres, al menos 1 mayúscula, 1 minúscula y 1 dígito</errorContrasena>
     <errorRepContrasena>Las contraseñas deben coincidir</errorRepContrasena>
+    <errorServidor>Ha ocurrido un problema con el servidor. Vuélvalo a intentar más tarde.</errorServidor>
+    <errorAutenticacion>El email o la contraseña no son correctos</errorAutenticacion>
+    <errorPersonas>El número de personas introducidas en inválida</errorPersonas>
 
     <carta>
         <bebida>
