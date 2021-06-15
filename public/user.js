@@ -6,7 +6,9 @@ const saltRounds = 10;
 const UserSchema = new mongoose.Schema({
     username: { type: String, required: true},
     email: { type: String, required: true, unique: true },
-    password: { type: String, required: true}
+    password: { type: String, required: true},
+    points: {type: Number, requires: false},
+    reservations: {type: Array, required: false}
 });
 
 //Función que se ejecuta antes de que se guarde el usuario para encriptar la contraseña

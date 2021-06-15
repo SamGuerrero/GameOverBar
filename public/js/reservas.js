@@ -1,7 +1,8 @@
 $(function(){
     colocarTexto();
     comprobarUsuario();
-    comprobarReserva()
+    comprobarReserva();
+    $('#datos_ocultos').hide();
 
     $('#espanol').click(function(){
         manageCookie('idioma', 'espanol');
@@ -13,12 +14,29 @@ $(function(){
         colocarTexto();
     });
 
-    //Sacado tal cual de la librería FullCalendar
+    //FullCalendar
+    let eventPrinted = false;
     let calendarEl = document.getElementById('calendar');
     let calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: 'dayGridMonth'
+        initialView: 'dayGridMonth',
+        hiddenDays: [ 1, 2, 3, 7 ],
+        timeZone: 'UTC',
+        locale: 'es',
+        editable: true
     });
     calendar.render();
+    calendar.on('dateClick', function(info) {
+        if (!eventPrinted){
+            eventPrinted = true;
+            let event =
+                {
+                  title: 'Reserva',
+                  start: info.dateStr,
+                  end: info.dateStr
+                }
+            calendar.addEvent(event);
+        }
+    });
 
     $('#btn_entrar').click(function(){
         window.location="entrar.html";
@@ -53,13 +71,14 @@ $(function(){
             setTimeout(function(){$('#errorPersonas').hide()}, 5000);
         }
 
-        if (!fechaValida()){
+        if (!fechaValida(calendar)){
             valido = false;
             $('#errorCalendario').show();
             setTimeout(function(){$('#errorCalendario').hide()}, 5000);
         }
 
         if (valido){
+            $('#fecha').val(calendar.getEvents()[0].start);
             $('.formulario').submit();
         }else {
             valido = true;
@@ -108,6 +127,7 @@ function colocarTexto(){
             $('#btn_reservar').html($(res).find('btn_reservar'));
             $('#tengo_cuenta').html($(res).find('tengo_cuenta'));
             $('#reservaEnviada').html($(res).find('reservaEnviada'));
+            $('#reservaDenegada').html($(res).find('reservaDenegada'));
             if (readCookie('email') == null){
                 $('#btn_salir').hide();
             
@@ -142,13 +162,22 @@ function comprobarUsuario(){
 
 function comprobarReserva(){
     if (readCookie('reservaAutorizada') == null){
-        $('.formulario').show();
         $('#reservaEnviada').hide();
+        if (readCookie('reservaDenegada') == null){
+            $('.formulario').show();
+            $('#reservaDenegada').hide();
+        
+        }else {
+            manageCookie('reservaDenegada', "", -1);
+            $('.formulario').hide();
+            $('#reservaDenegada').show();
+        }
     
     }else{
         manageCookie('reservaAutorizada', "", -1);
         $('.formulario').hide();
         $('#reservaEnviada').show();
+        $('#reservaDenegada').hide();
     }
 
     if (readCookie('email') == null){
@@ -174,9 +203,13 @@ function personasValidas(){
     return ((personas >= 1) && (personas <=25));
 }
 
-function fechaValida(){
-    let calendar = $('#calendar').val();
-    console.log(calendar);
+function fechaValida(calendar){
+    let fecha = calendar.getEvents();
+    if (fecha.length > 0){
+        return true;
+    
+    }else{
+        return false;
+    }
 
-    return true;
 }

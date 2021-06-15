@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Over Bar - Reservas</title>
+    <title>Game Over Bar - Perfil</title>
 
     <!--CSS-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href='js/fullcalendar-5.7.0/lib/main.css' rel='stylesheet' />
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
 
     <!--Bootstrap-->
@@ -23,11 +22,9 @@
     <!--JS-->
     <script src="js/jquery-3.6.0.js"></script>
     <script src="js/manageCookies.js"></script>
-    <script src="js/reservas.js"></script>
-    <script src='js/fullcalendar-5.7.0/lib/main.js'></script>
-    <script src='js/fullcalendar-5.7.0/lib/locales-all.js'></script>
-</head>
+    <script src="js/perfil.js"></script>
 
+</head>
 <body>
     <!--Header-->
     <header>
@@ -45,9 +42,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="index.html"><img src="/img/iconos/vida.svg" class="icono"/><span id="nav_inicio"></span></a>
+                <a class="nav-item nav-link active" href="#index.html"><img src="/img/iconos/vida.svg" class="icono"/><span id="nav_inicio"></span></a>
                 <a class="nav-item nav-link" href="carta.html"><img src="/img/iconos/cerveza.svg" class="icono"/><span id="nav_carta"></span></a>
-                <a class="nav-item nav-link active" href="#reservas.html"><img src="/img/iconos/preguntas.svg" class="icono"/><span id="nav_reservas"></span></a>
+                <a class="nav-item nav-link" href="reservas.html"><img src="/img/iconos/preguntas.svg" class="icono"/><span id="nav_reservas"></span></a>
                 <a class="nav-item nav-link" href="juegos.html"><img src="/img/iconos/fantasma.svg" class="icono"/><span id="nav_juegos"></span></a>
                 <a class="nav-item nav-link" href="perfil.html" id="a_perfil"><img src="/img/iconos/info.svg" class="icono"/><span id="nav_perfil"></span></a>
             </div>
@@ -62,34 +59,14 @@
     <!--Contenido-->
     <div class="container" id="contenido">
         <div class="row">
-            <div class="col">
-                <h3 id="titulo_formulario"></h3>
-            </div>
-        </div>
-        <div class="row">
             <div class="col-md">
-                <div class="reg_error" id="errorCalendario"></div>
-                <div id='calendar'></div>
+                <img src="img/presentacion/maquinas.jpg" alt="Máquinas arcade" class="img-thumbnail">
             </div>
             <div class="col-md">
-                <br>
-                <form class="formulario" action="/sendEmail" method="POST">
-                    <label id="label_email"></label>
-                    <br><input type="text" id="email" name="email">
-                    <div class="reg_error" id="errorEmail"></div>
-                    <br><br><label id="label_numPersonas"></label>
-                    <br><input type="number" min="1" max="25" id="personas" name="personas">
-                    <div class="reg_error" id="errorPersonas"></div>
-                    <div id="datos_ocultos">
-                        <input type="text" id="fecha" name="fecha">
-                    </div>
-                    <br><br><button class="btn btn-sm btn-outline-secondary ml-auto" type="button" id="btn_reservar"></button>
-                    <br><a href="entrar.html" id="tengo_cuenta" class="a_underButton"></a>
-                </form>
+                <h3 id="historia_titulo"></h3>
+                <p id="historia_texto"></p>
             </div>
-
-            <div class="col" id="reservaEnviada"></div>
-            <div class="col" id="reservaDenegada"></div>
+            
         </div>
     </div>
 
@@ -97,20 +74,20 @@
     <div class="container" id="footer">
         <div class="row">
             <div class="col-sm">
-                <h5><b><u>Contacto:</u></b></h5>
+                <h5 class="titulo_footer" id="contacto_titulo"></h5>
             </div>
         </div>
         <div class="row">
             <div class="col-sm">
-                <span>email-prueba@correo.com</span><br> <!--TODO: Si le da al email que abra el correo-->
-                <span>915465621</span><br> <!--TODO: Si le da al telefono que guarde el número o llame-->
-                <span>Plaza de la luna, 2</span> <!--TODO: Si hace click que abra el maps-->
+                <span id="email"></span><br> <!--TODO: Si le da al email que abra el correo-->
+                <span id="telefono"></span><br> <!--TODO: Si le da al telefono que guarde el número o llame-->
+                <span id="direccion"></span> <!--TODO: Si hace click que abra el maps-->
             </div>
             <!--Separador vertical-->
             <div style="border-left:.5px solid gray;height:5em;"></div>
             <div class="col-sm">
-                <span>Horario:</span><br>
-                <span>Jueves, Viernes y Sábados de 18:00 a 2:00</span>
+                <span id="horario_titulo"></span><br>
+                <span id="horario"></span>
             </div>
             <!--Añadir imagen del sitio-->
         </div>

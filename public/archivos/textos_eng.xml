@@ -30,13 +30,15 @@
     <label_numPersonas>How many people will go?</label_numPersonas>
     <btn_reservar>Reserve</btn_reservar>
     <reservaEnviada>An email has been with your reservation</reservaEnviada>
+    <reservaDenegada>The selected date has arrive to its maximum people. Please reload the page and select another date</reservaDenegada>
     
     <errorEmail>You need a valid email</errorEmail>
     <errorContrasena>The password must have from 8 to 16 characters, at least 1 uppercase, 1 lowercase y 1 number</errorContrasena>
     <errorRepContrasena>Passwords must be the same</errorRepContrasena>
     <errorServidor>A problem with the server has occurred. Try again later.</errorServidor>
     <errorAutenticacion>Email or password are not correct</errorAutenticacion>
-    <errorPersonas>El número de personas introducidas en inválida</errorPersonas>
+    <errorPersonas>The number of people selected is not valid</errorPersonas>
+    <errorCalendario>Must select a date</errorCalendario>
 
     <carta>
         <bebida>

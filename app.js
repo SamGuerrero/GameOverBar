@@ -1,13 +1,12 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const path = require('path');
-const bodyParser = require('body-parser');
 const app = express();
 
-const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser')
 const User = require('./public/user');
+const Reservation = require('./public/reservation');
 
 app.use(cookieParser());
 app.use(express.urlencoded({extended: false}));
@@ -45,10 +44,11 @@ app.post('/authenticate', (req, res) =>{
     
     User.findOne({email: data.email}, (err, user) => {
         if (err){
-            res.status(500).send("Error al autenticar el usuario");
+            res.redirect('/error.html');
         
         }else if (!user){
-            res.status(500).send("El usuario no existe");
+            res.cookie('errorAutenticacion', true);
+            res.redirect('/entrar.html');
         
         }else{
             user.isCorrectPassword(data.contrasena, (err, result) =>{
@@ -72,9 +72,7 @@ app.post('/authenticate', (req, res) =>{
 app.post('/sendEmail', (req, res) =>{
     console.log("body: %j", req.body);
     let data = req.body;
-    //TODO: Diferenciar español de inglés
-    let textoEmail = "Ha reservado en el bar para " + data.personas + " personas, el día: ";
-    //data.fecha + " a las: " + data.hora;
+    let textoEmail = "Ha reservado en el bar para " + data.personas + " personas, el día: " + data.fecha;
 
     let transporter = nodemailer.createTransport({
         host: 'smtp.ethereal.email',
@@ -86,7 +84,6 @@ app.post('/sendEmail', (req, res) =>{
         }
     });
 
-    //TODO: Diferenciar español de inglés
     var mailOptions = {
         from: "Game Over Bar",
         to: data.email,
@@ -94,15 +91,114 @@ app.post('/sendEmail', (req, res) =>{
         text: textoEmail
     }
 
-    transporter.sendMail(mailOptions, (err, result) => {
+    Reservation.findOne({date: data.fecha}, (err, reservation) => {
         if (err){
             res.redirect('/error.html');
         
+        }else if (!reservation){
+            let reser = new Reservation({date: data.fecha, people: data.personas});
+
+            reser.save(err => {
+                if (err){
+                    res.redirect('/error.html');
+                
+                }else{
+                    User.findOne({email: data.email}, (err, user) => {
+                        if (err){
+                            res.redirect('/error.html');
+                        
+                        }else if (user){
+                            user.reservations.push({date: data.fecha, people: data.personas})
+                            user.save(err => {
+                                if (err){
+                                    res.redirect('/error.html');
+                                
+                                }else{
+                                    transporter.sendMail(mailOptions, (err, result) => {
+                                        if (err){
+                                            res.redirect('/error.html');
+                                        
+                                        }else{
+                                            res.cookie('reservaAutorizada', true);
+                                            res.redirect('/reservas.html');
+                                        }
+                                    });
+                                }
+                            });
+
+                        }else{
+                            transporter.sendMail(mailOptions, (err, result) => {
+                                if (err){
+                                    res.redirect('/error.html');
+                                
+                                }else{
+                                    res.cookie('reservaAutorizada', true);
+                                    res.redirect('/reservas.html');
+                                }
+                            });
+                        }
+                    });
+                }
+            });
+            
         }else{
-            res.cookie('reservaAutorizada', true);
-            res.redirect('/reservas.html');
+           //Añadir gente a la reserva
+            let tempPeople = parseInt(reservation.people) + parseInt(data.personas);
+            console.log("gente actual: " + tempPeople);
+
+            if (tempPeople <= 10){
+                reservation.people = tempPeople;
+                reservation.save(err => {
+                    if (err){
+                        res.redirect('/error.html');
+                    
+                    }else{
+                        User.findOne({email: data.email}, (err, user) => {
+                            if (err){
+                                res.redirect('/error.html');
+                            
+                            }else if (user){
+                                user.reservations.push({date: data.fecha, people: data.personas})
+                                user.save(err => {
+                                    if (err){
+                                        res.redirect('/error.html');
+                                    
+                                    }else{
+                                        transporter.sendMail(mailOptions, (err, result) => {
+                                            if (err){
+                                                res.redirect('/error.html');
+                                            
+                                            }else{
+                                                res.cookie('reservaAutorizada', true);
+                                                res.redirect('/reservas.html');
+                                            }
+                                        });
+                                    }
+                                });
+
+                            }else{
+                                transporter.sendMail(mailOptions, (err, result) => {
+                                    if (err){
+                                        res.redirect('/error.html');
+                                    
+                                    }else{
+                                        res.cookie('reservaAutorizada', true);
+                                        res.redirect('/reservas.html');
+                                    }
+                                });
+                            }
+                        });
+                    }
+                });
+            
+            }else{
+                res.cookie('reservaDenegada', true);
+                res.redirect('/reservas.html');
+            }
         }
-    })
+    });
+
+    
 });
 
 app.listen(3000, () => {

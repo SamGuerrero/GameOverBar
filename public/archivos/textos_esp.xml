@@ -34,6 +34,7 @@
     <label_numPersonas>¿Cuántas personas irán?</label_numPersonas>
     <btn_reservar>Reservar</btn_reservar>
     <reservaEnviada>Se ha enviado un email con tu reserva</reservaEnviada>
+    <reservaDenegada>La fecha seleccionada ha alcanzado el aforo máximo permitido. Recargue la página y seleccione otra fecha</reservaDenegada>
     
     <errorEmail>Se necesita un email válido</errorEmail>
     <errorContrasena>La contraseña debe contener de 8 a 16 caracteres, al menos 1 mayúscula, 1 minúscula y 1 dígito</errorContrasena>
@@ -41,6 +42,7 @@
     <errorServidor>Ha ocurrido un problema con el servidor. Vuélvalo a intentar más tarde.</errorServidor>
     <errorAutenticacion>El email o la contraseña no son correctos</errorAutenticacion>
     <errorPersonas>El número de personas introducidas en inválida</errorPersonas>
+    <errorCalendario>No ha seleccionado fecha</errorCalendario>
 
     <carta>
         <bebida>
