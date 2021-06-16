@@ -132,7 +132,7 @@ function colocarTexto(){
                 $('#btn_salir').hide();
             
             }else{
-                $('#input_email').val(readCookie('email'));
+                $('#input_email').val(readCookie('email').replace('%40', '@'));
                 $('#btn_entrar').hide();
                 $('#btn_registrarse').hide();
             }

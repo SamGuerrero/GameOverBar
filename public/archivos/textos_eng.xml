@@ -25,7 +25,17 @@
     <label_email>Enter your email</label_email>
     <label_contrasena>Enter a password</label_contrasena>
     <label_repiteContrasena>Repeat the password</label_repiteContrasena>
+    <label_antiguaContrasena>Enter actual password</label_antiguaContrasena>
     <tengo_cuenta>I have an account</tengo_cuenta>
+    <btn_cambiar>Change password</btn_cambiar>
+    <borrarCuenta>Delete user</borrarCuenta>
+    <btn_borrarCuenta>Delete</btn_borrarCuenta>
+
+    <mensajeBienvenida>Good luck, </mensajeBienvenida>
+    <titulo_reservas>Reservations</titulo_reservas>
+    <titulo_ajustes>Settings</titulo_ajustes>
+    <cambiarContrasena>Change password</cambiarContrasena>
+    
 
     <label_numPersonas>How many people will go?</label_numPersonas>
     <btn_reservar>Reserve</btn_reservar>

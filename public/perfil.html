@@ -49,8 +49,6 @@
                 <a class="nav-item nav-link" href="perfil.html" id="a_perfil"><img src="/img/iconos/info.svg" class="icono"/><span id="nav_perfil"></span></a>
             </div>
             <div class="navbar-buttons">
-                <button class="btn btn-outline-success ml-auto" type="button" id="btn_entrar"></button>
-                <button class="btn btn-sm btn-outline-secondary ml-auto" type="button" id="btn_registrarse"></button>
                 <button class="btn btn-sm btn-outline-secondary ml-auto" type="button" id="btn_salir"></button>
             </div>
         </div>
@@ -60,13 +58,33 @@
     <div class="container" id="contenido">
         <div class="row">
             <div class="col-md">
-                <img src="img/presentacion/maquinas.jpg" alt="Máquinas arcade" class="img-thumbnail">
+                <h3 id="bienvenida"></h3>
             </div>
-            <div class="col-md">
-                <h3 id="historia_titulo"></h3>
-                <p id="historia_texto"></p>
+        </div>
+            <div class="row">
+                <div class="col-md">
+                    <h5 id="h3_cambiarContrasena"></h5>
+                    <form id="form_cambiar" action="/changePassword" method="post">
+                        <input type="email" id="email" name="email">
+                        <label id="label_contrasena"></label>
+                        <br><input type="password" id="contrasena" name="contrasena">
+                        <br><label id="label_nuevaContrasena"></label>
+                        <br><input type="password" id="nuevaContrasena" name="nuevaContrasena">
+                        <br><label id="label_repiteContrasena"></label>
+                        <br><input type="password" id="repiteContrasena" name="repiteContrasena">
+                        <br><br>
+                        <button id="btn_cambiar"></button>
+                    </form>
+                </div>
+
+                <div class="col-md">
+                    <form id="form_borrar" action="/deleteUser" method="post">
+                        <h5 id="h3_borrar"></h5>
+                        <input type="email" id="email2" name="email2">
+                        <button id="borrarCuenta"></button>
+                    </form>
+                </div>
             </div>
-            
         </div>
     </div>
 

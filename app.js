@@ -34,6 +34,8 @@ app.post('/register', (req, res) =>{
             res.redirect('/error.html'); //Error al registrar el usuario
         
         }else{
+            res.cookie('usuario', user.username);
+            res.cookie('email', user.email);
             res.redirect('/index.html'); //Usuario registrado
         }
     })
@@ -199,6 +201,65 @@ app.post('/sendEmail', (req, res) =>{
     });
 
     
+});
+
+app.post('/changePassword', (req, res) =>{
+    console.log("body: %j", req.body)
+    let data = req.body;
+    
+    User.findOne({email: data.email}, (err, user) => {
+        if (err){
+            console.log("Otro error 1")
+            res.redirect('/error.html');
+        
+        }else if (!user){
+            console.log("No encuentra usuario")
+            res.redirect('/error.html');
+        
+        }else{
+            user.isCorrectPassword(data.contrasena, (err, result) =>{
+                if(err){
+                    console.log("Otro error 2")
+                    res.redirect('/error.html');
+
+                }else if(result){
+                    user.password = data.nuevaContrasena;
+                    user.save(err => {
+                        if (err){
+                            console.log("Otro error 3")
+                            res.redirect('/error.html');
+                        
+                        }else{
+                            res.redirect('/index.html');
+                        }
+                    })
+
+                }else{
+                    console.log("No coincide contraseña")
+                    res.redirect('/error.html');
+                }
+            });
+        }
+    });
+
+});
+
+app.post('/deleteUser', (req, res) =>{
+    console.log("body: %j", req.body)
+    let data = req.body;
+    
+    User.deleteOne({email: data.email2}, (err, user) => {
+        if (err){
+            res.redirect('/error.html');
+        
+        }else if (!user){
+            res.redirect('/error.html');
+        
+        }else{
+            res.redirect('/index.html');
+        }
+    });
+
 });
 
 app.listen(3000, () => {

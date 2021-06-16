@@ -29,7 +29,16 @@
     <label_email>Introduzca su email</label_email>
     <label_contrasena>Introduzca una contraseña</label_contrasena>
     <label_repiteContrasena>Repita la contraseña</label_repiteContrasena>
+    <label_antiguaContrasena>Introduce tu contraseña</label_antiguaContrasena>
     <tengo_cuenta>Tengo una cuenta creada</tengo_cuenta>
+    <btn_cambiar>Cambiar contraseña</btn_cambiar>
+    <borrarCuenta>Eliminar usuario</borrarCuenta>
+    <btn_borrarCuenta>Eliminar</btn_borrarCuenta>
+
+    <mensajeBienvenida>Buena suerte, </mensajeBienvenida>
+    <titulo_reservas>Reservas</titulo_reservas>
+    <titulo_ajustes>Ajustes</titulo_ajustes>
+    <cambiarContrasena>Cambiar contraseña</cambiarContrasena>
 
     <label_numPersonas>¿Cuántas personas irán?</label_numPersonas>
     <btn_reservar>Reservar</btn_reservar>
