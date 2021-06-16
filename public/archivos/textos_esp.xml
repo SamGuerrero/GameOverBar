@@ -23,6 +23,7 @@
     <direccion>Plaza de la luna, 2</direccion>
     <horario_titulo>Horario:</horario_titulo>
     <horario>Jueves, Viernes y Sábados de 18:00 a 2:00</horario>
+    <ahref_juegos>Pulsa aquí para disfrutar de algunos juegos</ahref_juegos>
 
     <titulo_formulario>Rellene los datos del formulario</titulo_formulario>
     <label_nombre>Introduzca su nombre de usuario</label_nombre>
@@ -54,6 +55,39 @@
     <errorCalendario>No ha seleccionado fecha</errorCalendario>
 
     <carta>
+        <bebida>
+            <imagen>img/carta/desperados.jpg</imagen>
+            <nombre>Desperados</nombre>
+            <descripcion>
+                Desperados es una cerveza alsaciana elaborada por el grupo francés Brasserie Fischer, fábrica cervecera con sede en Schiltigheim, en las afueras de Estrasburgo, Francia. La marca es parte de la multinacional Heineken. Desperados es una cerveza aromatizada con tequila, con una graduación de 5.9
+            </descripcion>
+            <precio>4€</precio>
+        </bebida>
+        <bebida>
+            <imagen>img/carta/alhambra.jpg</imagen>
+            <nombre>Alhambra</nombre>
+            <descripcion>
+                De carácter intenso, Alhambra Reserva 1925 es nuestra reinterpretación del estilo Pilsen Bohemia, elaborada con ‘Saaz’, una de las variedades de lúpulo aromático más exclusivas, que le aportan a nuestra cerveza sus característicos aromas florales. Una cerveza para disfrutar la vida a través de los detalles
+            </descripcion>
+            <precio>4.50€</precio>
+        </bebida>
+        <bebida>
+            <imagen>img/carta/mahou.jpg</imagen>
+            <nombre>Mahou</nombre>
+            <descripcion>
+                Mahou es una de las más importantes empresas cerveceras de origen español, fundada en Madrid en el año 1890 como Hijos de Casimiro Mahou, fábrica de hielo y cerveza. La empresa destaca pronto por la calidad de su producción en un país de tradición vitivinícola que acepta tardíamente la cerveza, y durante el siglo XX se encuentra entre las más importantes dentro del mercado cervecero españo
+            </descripcion>
+            <precio>3.50€</precio>
+        </bebida>
+        <bebida>
+            <imagen>img/carta/cruzcampo.jpg</imagen>
+            <nombre>Cruzcampo</nombre>
+            <descripcion>
+                Cruzcampo es una marca de cerveza creada en Sevilla en 1904. En 1991 fue adquirida por Guinness Brewing Worldwide y, desde el año 2000, pertenece a la empresa cervecera neerlandesa Heineken International, a través de su filial Heineken España S.A
+            </descripcion>
+            <precio>4€</precio>
+        </bebida>
+
         <bebida>
             <imagen>img/carta/mojito.jpg</imagen>
             <nombre>Mojito</nombre>
@@ -93,6 +127,46 @@
             <nombre>Oregon Trail</nombre>
             <descripcion>
                 Seguro que has leído muchas veces lo de "fulanito de tal tiene disentería" en forma de meme para recordar el histórico The Oregon Trail de MECC (Minnesota Educational Computing Consortium), un juego que intentó reflejar la vida y dificultades del siglo XIX. El clásico de 1985 supuso una mejora radical sobre aquel prototipo en formato texto de 1971, pese a que en la actualidad nos parezca extremadamente primigenio el de la década de los 80. Sobra decir que la saga fue un éxito y sus ventas fueron millonarias.
+            </descripcion>
+            <disponible>No</disponible>
+        </juego>
+        <juego>
+            <imagen>img/juegos/streetFighter.jpeg</imagen>
+            <nombre>Street Fighter II: The World Warrior</nombre>
+            <descripcion>
+                Fue todo un fenómeno en esa etapa inicial de los noventa, desatando toda una fiebre por los juegos de lucha. Capcom dio con el clavo con esta secuela, dejando en pañales al clásico de 1987. Sentó las bases de los versus modernos. Uno de los juegos más copiados, con diferencia. Y también uno de los clásicos con más revisiones. Toda una leyenda.
+            </descripcion>
+            <disponible>No</disponible>
+        </juego>
+        <juego>
+            <imagen>img/juegos/heroQuest.jpeg</imagen>
+            <nombre>Hero Quest</nombre>
+            <descripcion>
+                Gremlin Interactive adaptó de modo bastante fiel el juego de tablero de HeroQuest al mundo de los videojuegos, pese a simplificar ciertos aspectos. Estábamos ante un juego de rol por turnos donde cada tirada la dictaba un dado. Aparte de lo adictivo que resultaba, gozó de una de las mejores bandas sonoras de la época en Amiga 500 (con permiso de la intro de Turrican II), compuesta por Barry Leitch.
+            </descripcion>
+            <disponible>No</disponible>
+        </juego>
+        <juego>
+            <imagen>img/juegos/finalFantasy.jpeg</imagen>
+            <nombre>Final Fantasy IV</nombre>
+            <descripcion>
+                El lanzamiento de Final Fantasy IV en 1991 fue muy importante para Squaresoft por distintos motivos, siendo el más evidente ese salto a la Super Famicom, con esos 16-bits de potencia. Además, debutó el Active Time Battle, santo y seña para las batallas. Y se acabó redondeando el JRPG con una historia memorable, entre las favoritas de la saga. En 2007 gozó de un remake en 3D para Nintendo DS.
+            </descripcion>
+            <disponible>No</disponible>
+        </juego>
+        <juego>
+            <imagen>img/juegos/battlezone.jpeg</imagen>
+            <nombre>Battlezone</nombre>
+            <descripcion>
+               Otro de aspecto hoy en día viejuno, pero revolucionario por el uso de sus gráficos vectoriales, fue el mítico Battlezone de Atari. Una recreativa que nos ponía a los mandos de un tanque para hacer frente a otros tanques bajo una perspectiva en primera persona. Más allá de posteriores adaptaciones a consolas, la saga se reinterpretaría en varias ocasiones, siendo la más notable la de su entrada en la Realidad Virtual a cargo de Rebellion, debutando primero en PS4 en 2016. 
+            </descripcion>
+            <disponible>No</disponible>
+        </juego>
+        <juego>
+            <imagen>img/juegos/pacman.jpeg</imagen>
+            <nombre>Pac-man</nombre>
+            <descripcion>
+               Es un arcade por el que parecen no haber pasado los años debido a que su fórmula de "comecocos" sigue hoy en día vigente, más allá de los múltiples intentos por revitalizar su fórmula con gran acierto. Porque el clásico se mantiene en forma y no para de reeditarse.
             </descripcion>
             <disponible>No</disponible>
         </juego>

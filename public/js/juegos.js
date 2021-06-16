@@ -66,12 +66,14 @@ function colocarTexto(){
             }
 
             //Contenido
+            $('.ahref_juegos').html($(res).find('ahref_juegos'));
             $("#contenido").empty();
             $(res).find('juegos').find('juego').each(function(index){
                 let divRow = document.createElement( "div" );
                 let divColText = document.createElement( "div" );
                 $(divRow).addClass('row');
                 $(divColText).addClass('col-md');
+                $(divColText).addClass('col-imgJuego');
 
                 
                 let juegoImg = document.createElement( "img" );

@@ -19,6 +19,7 @@
     <direccion>Plaza de la luna, 2</direccion>
     <horario_titulo>Opening hours:</horario_titulo>
     <horario>Thursday, Friday and Saturdays from 18:00 to 2:00</horario>
+    <ahref_juegos>Click here to enjoy some funny retro games</ahref_juegos>
 
     <titulo_formulario>Fill the form</titulo_formulario>
     <label_nombre>Enter your user name</label_nombre>
@@ -51,6 +52,39 @@
     <errorCalendario>Must select a date</errorCalendario>
 
     <carta>
+        <bebida>
+            <imagen>img/carta/desperados.jpg</imagen>
+            <nombre>Desperados</nombre>
+            <descripcion>
+                Desperados is an Alsatian beer brewed by the French Brasserie Fischer group, a brewery based in Schiltigheim, just outside Strasbourg, France. The brand is part of the multinational Heineken. Desperados is a tequila-flavoured beer, with an alcoholic strength of 5.9
+            </descripcion>
+            <precio>4€</precio>
+        </bebida>
+        <bebida>
+            <imagen>img/carta/alhambra.jpg</imagen>
+            <nombre>Alhambra</nombre>
+            <descripcion>
+                With an intense character, Alhambra Reserva 1925 is our reinterpretation of the Bohemian Pilsen style, brewed with 'Saaz', one of the most exclusive aromatic hop varieties, which gives our beer its characteristic floral aromas. A beer to enjoy life through the details.
+            </descripcion>
+            <precio>4.50€</precio>
+        </bebida>
+        <bebida>
+            <imagen>img/carta/mahou.jpg</imagen>
+            <nombre>Mahou</nombre>
+            <descripcion>
+                Mahou is one of the most important Spanish brewing companies, founded in Madrid in 1890 as Hijos de Casimiro Mahou, an ice and beer brewery. The company soon stood out for the quality of its production in a country with a wine-growing tradition that accepted beer late, and during the 20th century it became one of the most important in the Spanish beer market.
+            </descripcion>
+            <precio>3.50€</precio>
+        </bebida>
+        <bebida>
+            <imagen>img/carta/cruzcampo.jpg</imagen>
+            <nombre>Cruzcampo</nombre>
+            <descripcion>
+                Cruzcampo is a brand of beer created in Seville in 1904. In 1991 it was acquired by Guinness Brewing Worldwide and, since 2000, it has belonged to the Dutch brewing company Heineken International, through its subsidiary Heineken España S.A.
+            </descripcion>
+            <precio>4€</precio>
+        </bebida>
+
         <bebida>
             <imagen>img/carta/mojito.jpg</imagen>
             <nombre>Mojito</nombre>
@@ -89,15 +123,55 @@
             <imagen>img/juegos/oregonTrail.jpeg</imagen>
             <nombre>Oregon Trail</nombre>
             <descripcion>
-                Seguro que has leído muchas veces lo de "fulanito de tal tiene disentería" en forma de meme para recordar el histórico The Oregon Trail de MECC (Minnesota Educational Computing Consortium), un juego que intentó reflejar la vida y dificultades del siglo XIX. El clásico de 1985 supuso una mejora radical sobre aquel prototipo en formato texto de 1971, pese a que en la actualidad nos parezca extremadamente primigenio el de la década de los 80. Sobra decir que la saga fue un éxito y sus ventas fueron millonarias.
+                I'm sure you've often read the "so-and-so has dysentery" meme to recall MECC's (Minnesota Educational Computing Consortium) historic The Oregon Trail, a game that attempted to reflect 19th century life and hardship. The 1985 classic was a radical improvement on the 1971 text-based prototype, even though it may seem extremely early 1980s to us today. Needless to say, the saga was a success, selling in the millions.
             </descripcion>
             <disponible>No</disponible>
         </juego>
         <juego>
-            <imagen>img/juegos/oregonTrail.jpeg</imagen>
-            <nombre>Oregon Trail</nombre>
+            <imagen>img/juegos/streetFighter.jpeg</imagen>
+            <nombre>Street Fighter II: The World Warrior</nombre>
             <descripcion>
-                Seguro que has leído muchas veces lo de "fulanito de tal tiene disentería" en forma de meme para recordar el histórico The Oregon Trail de MECC (Minnesota Educational Computing Consortium), un juego que intentó reflejar la vida y dificultades del siglo XIX. El clásico de 1985 supuso una mejora radical sobre aquel prototipo en formato texto de 1971, pese a que en la actualidad nos parezca extremadamente primigenio el de la década de los 80. Sobra decir que la saga fue un éxito y sus ventas fueron millonarias.
+                It was a phenomenon in the early nineties, unleashing fighting game fever. Capcom hit the nail on the head with this sequel, leaving the 1987 classic in its infancy. It laid the foundation for modern versus games. One of the most copied games by far. And also one of the classics with the most revisions. A legend.
+            </descripcion>
+            <disponible>No</disponible>
+        </juego>
+        <juego>
+            <imagen>img/juegos/heroQuest.jpeg</imagen>
+            <nombre>Hero Quest</nombre>
+            <descripcion>
+                Gremlin Interactive adapted the HeroQuest board game quite faithfully to the world of videogames, despite simplifying certain aspects. It was a turn-based role-playing game where each roll was dictated by a die. Apart from being addictive, it enjoyed one of the best soundtracks of the time on Amiga 500 (with the exception of the Turrican II intro), composed by Barry Leitch.
+            </descripcion>
+            <disponible>No</disponible>
+        </juego>
+        <juego>
+            <imagen>img/juegos/finalFantasy.jpeg</imagen>
+            <nombre>Final Fantasy IV</nombre>
+            <descripcion>
+                The release of Final Fantasy IV in 1991 was very important for Squaresoft for several reasons, the most obvious being the leap to the Super Famicom, with its 16-bit power. It also saw the debut of Active Time Battle, the hallmark of the battles. And the JRPG was rounded off with a memorable story, one of the favourites of the series. In 2007 it enjoyed a 3D remake for Nintendo DS.
+            </descripcion>
+            <disponible>No</disponible>
+        </juego>
+        <juego>
+            <imagen>img/juegos/battlezone.jpeg</imagen>
+            <nombre>Battlezone</nombre>
+            <descripcion>
+               Another old-looking game, but revolutionary for its use of vector graphics, was Atari's legendary Battlezone. An arcade game that put us at the controls of a tank to take on other tanks from a first-person perspective. Beyond subsequent adaptations to consoles, the saga would be reinterpreted on several occasions, the most notable being its entry into Virtual Reality by Rebellion, debuting first on PS4 in 2016. 
+            </descripcion>
+            <disponible>No</disponible>
+        </juego>
+        <juego>
+            <imagen>img/juegos/pacman.jpeg</imagen>
+            <nombre>Pac-man</nombre>
+            <descripcion>
+               It is an arcade game for which the years seem to have not gone by because its "Pac-Man" formula is still valid today, despite the many attempts to revitalise its formula with great success. Because the classic is still going strong and is constantly being re-released.
+            </descripcion>
+            <disponible>No</disponible>
+        </juego>
+        <juego>
+            <imagen>img/juegos/duckHunt.jpeg</imagen>
+            <nombre>Duck Hunt</nombre>
+            <descripcion>
+                I'm sure you've often read the "so-and-so has dysentery" meme to recall MECC's (Minnesota Educational Computing Consortium) historic The Oregon Trail, a game that attempted to reflect 19th century life and hardship. The 1985 classic was a radical improvement on the 1971 text-based prototype, even though it may seem extremely early 1980s to us today. Needless to say, the saga was a success, selling in the millions.
             </descripcion>
             <disponible>No</disponible>
         </juego>
